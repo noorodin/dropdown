@@ -32,7 +32,7 @@ function Dropdown() {
       if (inputValue) {
         setOptions((prev) => [
           {
-            key: inputValue.toLowerCase(),
+            key: inputValue,
             value: inputValue,
           },
           ...prev,
@@ -53,13 +53,15 @@ function Dropdown() {
         onFocus={() => setFocused(true)}
       />
       {focused && options.length > 0 && (
-        <div className="dropdown__options">
-          {options.map(({ key, value }: Option) => (
-            <label key={key} className="dropdown__option">
-              {value}
-              <input type="checkbox" value={value} />
-            </label>
-          ))}
+        <div className="dropdown__options-wrapper">
+          <div className="dropdown__options">
+            {options.map(({ key, value }: Option) => (
+              <label key={key} className="dropdown__option">
+                {value}
+                <input type="checkbox" value={value} />
+              </label>
+            ))}
+          </div>
         </div>
       )}
     </section>
