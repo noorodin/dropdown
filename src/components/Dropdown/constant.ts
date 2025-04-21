@@ -1,4 +1,6 @@
-export const OPTIONS = [
+import { Option } from "./types";
+
+export const OPTIONS: Option[] = [
   {
     key: "education",
     value: "Education",
