@@ -1,12 +1,12 @@
-import './App.scss'
+import "./App.scss";
+import Dropdown from "./components/Dropdown/Dropdown";
 
 function App() {
-
   return (
-    <div>
-      Hello world!
+    <div className="container">
+      <Dropdown />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
