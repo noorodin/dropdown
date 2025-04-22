@@ -1,10 +1,9 @@
-$primary-color: #fefefe;
-$text-color: #000;
+@use "./styles/_variables.scss" as *;
 
 #root {
   width: 100%;
-  background-color: $primary-color;
-  color: $text-color;
+  background-color: $primary-bg-color;
+  color: $primary-text-color;
 }
 
 .container {

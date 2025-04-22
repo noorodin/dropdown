@@ -1,29 +1,31 @@
+@use "../../styles/_variables.scss" as *;
+
 .dropdown {
   width: 460px;
   display: flex;
   flex-direction: column;
   gap: 8px;
   font-weight: 500;
-  color: #666;
+  color: $input-text-color;
   position: relative;
   margin-bottom: 16px;
 
   &__input {
     width: 100%;
-    border: 2px solid rgb(87, 85, 85);
+    border: 2px solid $border-color;
     border-radius: 16px;
     height: 52px;
     padding: 0px 16px;
     font-size: 16px;
     display: flex;
     align-items: center;
-    color: #666;
+    color: $input-text-color;
     font-weight: 600;
     outline: none;
 
     &:focus {
-      border: 2px solid rgb(144, 166, 240);
-      box-shadow: 0px 1px 8px 2px rgba(144, 166, 240, 0.6);
+      border: 2px solid $focus-border-color;
+      box-shadow: 0px 1px 8px 2px $focus-shadow-color;
     }
   }
 
@@ -38,11 +40,11 @@
     position: absolute;
     top: 60px;
     z-index: 1;
-    background-color: #fff;
+    background-color: $bg-white-color;
     width: 100%;
     padding: 16px 4px;
-    box-shadow: 0px 1px 8px 2px rgba(47, 47, 48, 0.1);
-    border: 1px solid #ddd;
+    box-shadow: 0px 1px 8px 2px $box-shadow-color;
+    border: 1px solid $border-light-color;
     border-radius: 24px;
   }
 
@@ -64,7 +66,7 @@
     }
 
     &::-webkit-scrollbar-thumb {
-      background: rgb(175, 175, 175);
+      background: $scrollbar-thumb-color;
       border-radius: 10px;
     }
   }
@@ -72,18 +74,15 @@
   &__option {
     display: flex;
     justify-content: space-between;
-    color: rgb(99, 96, 96);
+    color: $option-color;
     padding: 10px 16px;
     position: relative;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
 
     &:hover {
       cursor: pointer;
-      color: rgb(57, 98, 173);
-      background-color: rgb(232, 240, 255);
+      color: $option-hover-color;
+      background-color: $option-hover-bg-color;
       border-radius: 8px;
     }
   }
@@ -110,10 +109,8 @@
       top: 2px;
       width: 7px;
       height: 14px;
-      border: solid rgb(52, 54, 185);
+      border: solid $tick-color;
       border-width: 0 3px 3px 0;
-      -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
       transform: rotate(45deg);
     }
   }
