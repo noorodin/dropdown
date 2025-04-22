@@ -58,7 +58,12 @@ function Dropdown() {
             {options.map(({ key, value }: Option) => (
               <label key={key} className="dropdown__option">
                 {value}
-                <input type="checkbox" value={value} />
+                <input
+                  className="dropdown__checkbox"
+                  type="checkbox"
+                  value={value}
+                />
+                <span className="dropdown__tick" />
               </label>
             ))}
           </div>
