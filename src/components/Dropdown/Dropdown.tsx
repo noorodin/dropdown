@@ -3,6 +3,7 @@ import DOMPurify from "dompurify";
 import "./Dropdown.scss";
 import { OPTIONS } from "./constant";
 import { Option } from "./types";
+import { GoChevronDown, GoChevronUp } from "react-icons/go";
 
 function Dropdown() {
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -53,6 +54,13 @@ function Dropdown() {
         onKeyDown={handlePressEnter}
         onFocus={() => setFocused(true)}
       />
+
+      {focused ? (
+        <GoChevronUp className="dropdown__chevron" />
+      ) : (
+        <GoChevronDown className="dropdown__chevron" />
+      )}
+
       {focused && options.length > 0 && (
         <div className="dropdown__options-wrapper">
           <div className="dropdown__options">

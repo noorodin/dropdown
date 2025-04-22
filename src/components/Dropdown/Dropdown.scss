@@ -27,6 +27,13 @@
     }
   }
 
+  &__chevron {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 24px;
+  }
+
   &__options-wrapper {
     position: absolute;
     top: 60px;
@@ -40,7 +47,7 @@
   }
 
   &__options {
-    height: 330px;
+    height: 320px;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
