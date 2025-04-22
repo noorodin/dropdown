@@ -1,4 +1,5 @@
 import { KeyboardEvent, useEffect, useRef, useState } from "react";
+import DOMPurify from "dompurify";
 import "./Dropdown.scss";
 import { OPTIONS } from "./constant";
 import { Option } from "./types";
@@ -57,7 +58,11 @@ function Dropdown() {
           <div className="dropdown__options">
             {options.map(({ key, value }: Option) => (
               <label key={key} className="dropdown__option">
-                {value}
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: DOMPurify.sanitize(value),
+                  }}
+                />
                 <input
                   className="dropdown__checkbox"
                   type="checkbox"
